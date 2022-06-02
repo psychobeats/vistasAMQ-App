@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Index sesión Iniciada</title>
+</head>
+
+
+<body>
+
+<div th:fragment="navBarInicio">
+  <nav class="nav">
+      <a class="navbar-brand" href="#">
+          <img src="https://drive.google.com/uc?export=download&id=1NCoNyhyGOZLjZlD187jCdu9aYntNhV68" width="30" height="30" alt="">
+        </a>
+      <a class="nav-link" href="#">AMQ!</a>
+      <a class="nav-link" href="#">Registro</a>
+      <a class="nav-link" href="#">Log In</a>
+      <a class="nav-link" href="#">Preguntas Frecuentes</a>
+  </nav>
+</div>
+
+<div> <!-- Logo, crear nueva Query, Ranking de Query's -->
+
+<img> <!-- Logo completo (a evaluar)-->
+
+<div> <!--Crear una nueva Query -->
+<h1>Crear nueva Query</h1>
+<button><a class="btn btn-primary" href="#" role="button">Click acá</a></button>
+</div>
+
+<div><!--Ranking-->
+<h2> Ranking de las 5 Query's mas votadas: </h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col"> Puesto </th>
+        <th scope="col"> Query </th>
+    </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th scope="row">#1</th>
+        <td> </td>  <!-- GOOGLEAR para que con un th:each, muestre los primeros 5 resultados -->
+      </tr>
+      <tr>
+        <th scope="row">#2</th>
+        <td> </td>
+      </tr>
+      <tr>
+        <th scope="row">#3</th>
+        <td> </td>
+      </tr>
+      <tr>
+        <th scope="row">#4</th>
+        <td> </td>
+      </tr>
+      <tr>
+        <th scope="row">#5</th>
+        <td> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div th:replace="logIn :: footer"></div>
+
+</body>
+</html>

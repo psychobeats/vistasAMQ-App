@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"></html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title> LogIn </title>
+</head>
+
+<body>
+
+    <div th:replace="indexInicial :: navBarPublico"></div>
+
+<div>
+
+    <h1> Ingresar: </h1>
+
+    <form>        
+    <div>
+        <label>E-mail: </label>
+        <input type="email" th:value="${email}">
+    </div>
+    <div>
+       <label>Clave: </label>
+        <input type="password" th:value="${clave}">
+        <div class="form-text">Condiciones para la clave.</div>
+    </div>
+         
+<button class="btn btn-primary" type="submit">Ingresar</button>  
+</form>
+</div>
+
+
+<div th:fragment="footer">
+<footer>
+<p>- A mover la Query, 2022 -</p>
+</footer>
+</div>
+
+
+</body>
+</html> 

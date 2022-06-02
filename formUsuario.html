@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href=".css">
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Monoton&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<title>Form usuario</title>
+</head>
+
+<body>
+
+<div th:replace="logIn :: navBarPublico"></div>
+
+<h1>Formulario de registro: </h1>
+
+<form>
+  <div>
+    <label>Alias: </label>
+    <input type="text" th:value="${alias}">
+  </div>
+  <div>
+    <label>Sexo: </label>
+    <select class="form-control" th:field="*{Sexo}">
+     <option th:each="Sexo : ${T(com.attacomsian.runner.domains.constants.Topic).values()}" th:value="${Sexo}" th:text="${Sexo}">Seleccionar</option>
+    </select>
+  </div>  
+  <div>
+    <label>E-mail: </label>
+    <input type="email" th:value="${email}">
+  </div>
+  <div>
+    <label>País: </label>
+    <select class="form-control" th:field="*{Pais}">
+     <option th:each="Pais : ${T(com.attacomsian.runner.domains.constants.Topic).values()}" th:value="${Pais}" th:text="${Pais}">Seleccionar</option>
+    </select>
+  </div>
+  <div>
+    <label>Fecha de Nacimiento: </label>
+    <input type="date" th:value="${nacimiento}">
+  </div> 
+  <div>
+    <label>Clave: </label>
+    <input type="password" th:value="${clave}">
+    <div class="form-text">Condiciones para la clave.</div>
+  </div>
+  <div>
+    <label>Confirmar Clave: </label>
+    <input type="password" th:value="${claveValidar}">
+  </div>
+
+  <button class="btn btn-primary" type="submit">Guardar</button>
+</form>
+
+<div th:replace="logIn :: footer"></div>
+
+</body>
+</html>
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>   
+
+<div th:replace="perfil :: navBarInicio"></div>
+
+<div>
+    <h2>Preguntas Frecuentes</h2>
+     <div class="layout">
+      <div class="accordion">
+            
+        <div class="accordion__pregunta">
+          <p>¿Cómo subo una nueva Query?</p>
+        </div>
+        <div class="accordion__respuesta">
+          <p>Una vez que hayas creado tu usuario y te hayas logeado, vas a visualizar un botón de "crear nueva Query" en el inicio de la página. Dale click y empezá a crear nuevas encuestas. Ta </p>
+        </div>
+      </div>
+    
+      <div class="accordion">
+        <div class="accordion__pregunta">
+          <p>¿Hay reglas para crear las Query's?</p>
+        </div>
+        <div class="accordion__respuesta">
+          <p>Respuesta.</p>
+        </div>
+      </div>
+    
+    <div class="accordion">
+      <div class="accordion__pregunta">
+        <p>¿Puedo votar mi propia Query?</p>
+      </div>
+      <div class="accordion__respuesta">
+        <p>Respuesta.</p>
+      </div>
+      </div>
+    
+    <div class="accordion">
+      <div class="accordion__pregunta">
+        <p>¿Puedo borrar una de mis Query's creadas?</p>
+      </div>
+      <div class="accordion__respuesta">
+        <p>Respuesta.</p>
+      </div>
+      </div>
+    
+    <div class="accordion">
+      <div class="accordion__pregunta">
+        <p>¿Quién puede votar mis Query's?</p>
+      </div>
+      <div class="accordion__respuesta">
+        <p>Respuesta.</p>
+      </div>
+      </div>
+    </div>
+    
+    <script>
+      let respuestas=document.querySelectorAll(".accordion");
+      respuestas.forEach((event)=>{event.addEventListener('click',()=>{
+        if(event.classList.contains("active")){event.classList.remove("active");
+        } else{
+        event.classList.add("active");
+        }
+       })
+      })
+    </script>
+    </div>  
+    
+<div th:replace="logIn :: footer"></div>
+    
+</body>
+</html>

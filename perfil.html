@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Mi perfil</title>
+</head>
+
+<body>
+    <div th:replace="IndexIniciado :: navBarInicio"></div>
+
+    <div>
+            <h1> Mi cuenta</h1>
+            <div>
+                <p>ALIAS:</p>
+                <span th:text="${usuario.alias}">alias</span>
+                <p>FECHA DE NACIMIENTO:</p> 
+                <span th:text="${usuario.nacimiento}">nacimiento</span>
+                <p>PAIS:</p> 
+                <span th:text="${usuario.pais}">pais</span>
+                <p>SEXO:</p>
+                <span th:text="${usuario.sexo}">sexo</span>
+                <p>EMAIL</p>
+                <span th:text="${usuario.email}">email</span>
+            </div>
+        
+        <button th:href="#">Mis Query´s</button>
+        <button th:href="#">Query´s votadas</button>
+    </div>
+    <div th:replace="logIn :: footer"></div>
+
+
+</body>
+
+</html>
