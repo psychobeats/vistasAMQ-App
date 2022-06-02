@@ -14,7 +14,7 @@
 
 /* SCSS Gradient */
 
---gradient-top: linear-gradient(0deg, #2b3a40ff, #ff65a8ff, #ff996aff, #fddb7cff, #f1e6c3ff, #ffbe0bff, #fb5607ff, #ff006eff, #8338ecff, #3a86ffff);
+--gradient-top: linear-gradient(0deg, #2b3a40ff, #f1e6c3ff);
 --gradient-right: linear-gradient(90deg, #2b3a40ff, #ff65a8ff, #ff996aff, #fddb7cff, #f1e6c3ff, #ffbe0bff, #fb5607ff, #ff006eff, #8338ecff, #3a86ffff);
 --gradient-bottom: linear-gradient(180deg, #2b3a40ff, #ff65a8ff, #ff996aff, #fddb7cff, #f1e6c3ff, #ffbe0bff, #fb5607ff, #ff006eff, #8338ecff, #3a86ffff);
 --gradient-left: linear-gradient(270deg, #2b3a40ff, #ff65a8ff, #ff996aff, #fddb7cff, #f1e6c3ff, #ffbe0bff, #fb5607ff, #ff006eff, #8338ecff, #3a86ffff);
@@ -32,4 +32,19 @@ font-family: 'Righteous', cursive;*/
 #hh1{
     color: var(--winter-sky);
     font-family: 'Righteous', cursive;
+}
+.nav {
+    background-color: linear-gradient(--winter-sky,--outer-space-crayola);
+}
+
+#nav-logo{
+    text-align: left;
+    margin-right: 65%;
+}
+
+.nav-link {
+    text-align: right;
+    margin-left: 0;
+    font-family: 'Righteous', cursive;
+
 }
