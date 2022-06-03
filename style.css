@@ -14,7 +14,7 @@
 
 /* SCSS Gradient */
 
---gradient-top: linear-gradient(0deg, #2b3a40ff, #f1e6c3ff);
+--gradient-top: linear-gradient(0deg, #2b3af1e6c3ff40ff, #);
 --gradient-right: linear-gradient(90deg, #2b3a40ff, #ff65a8ff, #ff996aff, #fddb7cff, #f1e6c3ff, #ffbe0bff, #fb5607ff, #ff006eff, #8338ecff, #3a86ffff);
 --gradient-bottom: linear-gradient(180deg, #2b3a40ff, #ff65a8ff, #ff996aff, #fddb7cff, #f1e6c3ff, #ffbe0bff, #fb5607ff, #ff006eff, #8338ecff, #3a86ffff);
 --gradient-left: linear-gradient(270deg, #2b3a40ff, #ff65a8ff, #ff996aff, #fddb7cff, #f1e6c3ff, #ffbe0bff, #fb5607ff, #ff006eff, #8338ecff, #3a86ffff);
@@ -29,22 +29,56 @@ font-family: 'Pacifico', cursive;
 font-family: 'Righteous', cursive;*/
 }
 
+body{
+    background-image: url("https://drive.google.com/uc?export=download&id=1c22JmtLntTWUY-TzqjiZqJAcLRdBBX1e");
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    
+    
+}
+
 #hh1{
-    color: var(--winter-sky);
+    color: var(--amber);
+    text-shadow: var(--winter-sky);
     font-family: 'Righteous', cursive;
+    text-align: center;
+    
 }
 .nav {
-    background-color: linear-gradient(--winter-sky,--outer-space-crayola);
+    background: linear-gradient(90deg, rgba(64,37,82,1) 0%, rgba(255,239,195,1) 100%);
+    display: flex;
+    color: var(--winter-sky);
 }
 
 #nav-logo{
     text-align: left;
-    margin-right: 65%;
+    margin-right: 55%;
+    padding-top: 5px;
+    
+  
 }
 
 .nav-link {
     text-align: right;
     margin-left: 0;
+    padding: 19px;
+    font-family: 'Pacifico', cursive;
+    text-decoration: none;
+    
+}
+
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
     font-family: 'Righteous', cursive;
+    text-align: justify;
+    margin: 5%;
 
 }
+
