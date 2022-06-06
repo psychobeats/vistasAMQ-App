@@ -69,6 +69,11 @@ body{
     
 }
 
+.nav-link:link
+.nav-link:hover
+.nav-link:active
+.nav-link:visited
+
 #logo{
     display: flex;
     justify-content: center;
@@ -80,5 +85,31 @@ p {
     text-align: justify;
     margin: 5%;
 
+}
+
+.layout{
+    width: 600px;  
+}
+.accordion{
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.accordion__pregunta p{
+    margin: 5px;
+    padding: 0;
+}
+.accordion__respuesta p{
+    margin: 5px;
+    padding: 10px;
+}
+.accordion:hover{
+    cursor: pointer;
+}
+.accordion__respuesta {
+    display: none;
+} 
+.accordion.active .accordion__respuesta {
+    display: block;
 }
 
