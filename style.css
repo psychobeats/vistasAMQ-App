@@ -30,10 +30,10 @@ font-family: 'Righteous', cursive;*/
 }
 
 body{
-    background-image: url("https://drive.google.com/uc?export=download&id=1c22JmtLntTWUY-TzqjiZqJAcLRdBBX1e");
+    background-image: url("https://drive.google.com/uc?export=download&id=16XApxKWDAbuHVsoONOrYG8J-gnilGbi3");
     background-repeat:no-repeat;
     background-position: center center;
-    background-attachment: fixed;
+    background-attachment:scroll;
     background-size: cover;
     
     
@@ -69,6 +69,11 @@ body{
     
 }
 
+.nav-link:link
+.nav-link:hover
+.nav-link:active
+.nav-link:visited
+
 #logo{
     display: flex;
     justify-content: center;
@@ -80,5 +85,31 @@ p {
     text-align: justify;
     margin: 5%;
 
+}
+
+.layout{
+    width: 600px;  
+}
+.accordion{
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.accordion__pregunta p{
+    margin: 5px;
+    padding: 0;
+}
+.accordion__respuesta p{
+    margin: 5px;
+    padding: 10px;
+}
+.accordion:hover{
+    cursor: pointer;
+}
+.accordion__respuesta {
+    display: none;
+} 
+.accordion.active .accordion__respuesta {
+    display: block;
 }
 
