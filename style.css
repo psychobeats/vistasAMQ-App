@@ -107,7 +107,12 @@ p {
 .accordion__respuesta {
     display: none;
 } 
-.accordion.active .accordion__respuesta {
+.accordion.active .accordion__respuesta{
     display: block;
 }
 
+#table-ranking{
+    margin: 0 auto;
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+}

@@ -43,34 +43,34 @@
 <div><!--Ranking-->
 <h1 id="hh1"> TOP 5 QUERY'S MÁS VOTADAS: </h1>
 
-<table class="table">
-    <thead>
+<table class="table" id="table-ranking">
+    <thead id="head-ranking">
     <tr>
         <th scope="col"> Puesto </th>
         <th scope="col"> Query </th>
     </tr>
     </thead>
 
-    <tbody>
+    <tbody id="body-ranking">
       <tr>
-        <th scope="row">#1</th>
-        <td> </td>  <!-- GOOGLEAR para que con un th:each, muestre los primeros 5 resultados -->
+        <th scope="row"> #1 </th>
+        <td th:each="query:${querys}"> Query </td><!-- consulta para que muestre los primeros 5 resultados -->
+      </tr>
+      <tr> 
+        <th scope="row"> #2 </th>
+        <td th:each="query:${querys}"> Query </td>
       </tr>
       <tr>
-        <th scope="row">#2</th>
-        <td> </td>
+        <th scope="row"> #3 </th>
+        <td th:each="query:${querys}"> Query </td>
       </tr>
       <tr>
-        <th scope="row">#3</th>
-        <td> </td>
+        <th scope="row"> #4 </th>
+        <td th:each="query:${querys}"> Query </td>
       </tr>
       <tr>
-        <th scope="row">#4</th>
-        <td> </td>
-      </tr>
-      <tr>
-        <th scope="row">#5</th>
-        <td> </td>
+        <th scope="row"> #5 </th>
+        <td th:each="query:${querys}"> Query </td>
       </tr>
     </tbody>
   </table>
