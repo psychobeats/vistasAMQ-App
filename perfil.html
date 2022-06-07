@@ -17,24 +17,25 @@
     <div th:replace="IndexIniciado :: navBarInicio"></div>
 
     <div>
-            <h1> Mi cuenta</h1>
+            <h1 id="hh1"> Mi cuenta</h1>
             <div>
                 <p>ALIAS:</p>
-                <span th:text="${usuario.alias}">alias</span>
+                <span th:text="${usuario.alias}" id="span-usuario">alias</span>
                 <p>FECHA DE NACIMIENTO:</p> 
-                <span th:text="${usuario.nacimiento}">nacimiento</span>
+                <span th:text="${usuario.nacimiento}" id="span-usuario">nacimiento</span>
                 <p>PAIS:</p> 
-                <span th:text="${usuario.pais}">pais</span>
+                <span th:text="${usuario.pais}" id="span-usuario">pais</span>
                 <p>SEXO:</p>
-                <span th:text="${usuario.sexo}">sexo</span>
+                <span th:text="${usuario.sexo}" id="span-usuario">sexo</span>
                 <p>EMAIL</p>
-                <span th:text="${usuario.email}">email</span>
+                <span th:text="${usuario.email}" id="span-usuario">email</span>
             </div>
         
-        <button th:href="#">Mis Query´s</button>
-        <button th:href="#">Query´s votadas</button>
+        <button th:href="#" id="btn-usuario">Mis Query´s</button>
+        <button th:href="#" id="btn-usuario">Query´s votadas</button>
     </div>
-    <div th:replace="logIn :: footer"></div>
+
+<div th:replace="IndexIniciado :: footer"></div>
 
 
 </body>

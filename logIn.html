@@ -14,35 +14,25 @@
 </head>
 
 <body>
-
     <div th:replace="indexInicial :: navBarPublico"></div>
 
 <div>
-
-    <h1> Ingresar: </h1>
-
+    <h1 id="hh1"> Ingresar: </h1>
     <form>        
     <div>
-        <label>E-mail: </label>
-        <input type="email" th:value="${email}">
+        <label id="label-usuario">E-mail: </label>
+        <input id="input-usuario" type="email" th:value="${email}">
     </div>
     <div>
-       <label>Clave: </label>
-        <input type="password" th:value="${clave}">
+       <label id="label-usuario">Clave: </label>
+        <input id="input-usuario" type="password" th:value="${clave}">
         <div class="form-text">Condiciones para la clave.</div>
-    </div>
-         
-<button class="btn btn-primary" type="submit">Ingresar</button>  
+    </div>         
+<button class="btn btn-primary" type="submit" id="btn-usuario" href="#">Ingresar</button>  
 </form>
 </div>
 
-
-<div th:fragment="footer">
-<footer>
-<p>- A mover la Query, 2022 -</p>
-</footer>
-</div>
-
+<div th:replace="IndexIniciado :: footer"></div>
 
 </body>
 </html> 

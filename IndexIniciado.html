@@ -16,30 +16,32 @@
 
 <body>
 
-<div th:fragment="navBarInicio">
+ <!-- <div th:fragment="navBarInicio"> --> 
   <nav class="nav">
     <a class="navbar-brand" id="nav-logo"  href="#">
          <img src="https://drive.google.com/uc?export=download&id=1NCoNyhyGOZLjZlD187jCdu9aYntNhV68" width="160">
        </a>
      
-     <a class="nav-link"  href="#">Registro</a>
-     <a class="nav-link" href="#">Log In</a>
-     <a class="nav-link" href="#">Preguntas Frecuentes</a>
- 
+     <a class="nav-link"  href="#">Mi cuenta</a>
+     <a class="nav-link" href="#">Mis Query's</a>
+     <a class="nav-link" href="#">Preguntas Frecuentes</a> 
  </nav>
-</div>
+<!-- </div> -->
 
-<div> <!-- Logo, crear nueva Query, Ranking de Query's -->
+<div> 
 
-<img> <!-- Logo completo (a evaluar)-->
+<img src="https://drive.google.com/uc?export=download&id=1gO6ZP9ngr8VEby5HMTVN4vhDGpMSchvy" width="500" height=auto/>
 
 <div> <!--Crear una nueva Query -->
-<h1>Crear nueva Query</h1>
-<button><a class="btn btn-primary" href="#" role="button">Click acá</a></button>
+<h1 id="hh1">CREAR NUEVA QUERY</h1>
+<div>
+  <button><a class="btn btn-primary btn-lg" href="#" role="button">Click acá</a></button>
+</div>
+
 </div>
 
 <div><!--Ranking-->
-<h2> Ranking de las 5 Query's mas votadas: </h2>
+<h1 id="hh1"> TOP 5 QUERY'S MÁS VOTADAS: </h1>
 
 <table class="table">
     <thead>
@@ -74,7 +76,11 @@
   </table>
 </div>
 
-<div th:replace="logIn :: footer"></div>
+<div th:fragment="footer">
+  <footer>
+  <p>- A mover la Query, 2022 -</p>
+  </footer>
+</div>
 
 </body>
 </html>
