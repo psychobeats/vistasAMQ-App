@@ -40,8 +40,9 @@ body{
 }
 
 #hh1{
-    color: var(--amber);
-    text-shadow: var(--winter-sky);
+    color: var(--blue-violet);
+    text-shadow: 2px 2px 2px var(--winter-sky);
+    font-size: 80px;
     font-family: 'Righteous', cursive;
     text-align: center;
     
@@ -62,6 +63,7 @@ body{
 
 .nav-link {
     text-align: right;
+    font-size: 18px;
     margin-left: 0;
     padding: 19px;
     font-family: 'Pacifico', cursive;
@@ -69,10 +71,16 @@ body{
     
 }
 
-.nav-link:link
-.nav-link:hover
-.nav-link:active
-.nav-link:visited
+.nav-link:link{
+    color: var(--blue-violet);
+}
+.nav-link:hover{
+    color:var(--orange-pantone);
+}
+.nav-link:active{
+    color:var(--winter-sky);
+}
+
 
 #logo{
     display: flex;
@@ -111,5 +119,39 @@ p {
 } 
 .accordion.active .accordion__respuesta {
     display: block;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+#btnIndex{
+    background-color: var(--orange-pantone);
+    box-shadow: rgba(43,58,64, 0.7) 4px 4px 0px;
+    border-radius: 8px;
+    transition: transform 200ms, box-shadow 200ms;
+    width: 150px;
+    height: 75px;
+    font-family: 'Pacifico', cursive;
+    font-size: 22px;
+    color: var(--dutch-white);
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+}
+
+#btnIndex:hover{
+    background-color:var(--winter-sky);
+    color: var(--hot-pink);
+}
+
+
+
+#btnIndex:active{
+    transform: translateY(4px) translateX(4px);
+    box-shadow: rgba(43,58,64, 0.7) 0px 0px 0px;
+    background-color: var(--hot-pink);
+    color: var(--winter-sky);
+
 }
 
