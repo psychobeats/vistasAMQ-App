@@ -137,6 +137,7 @@ a:link, a:visited, a:active {
     color: var(--dutch-white);
     margin-left: 50%;
     transform: translateX(-50%);
+   
 
 }
 
@@ -152,6 +153,8 @@ a:link, a:visited, a:active {
     box-shadow: rgba(43,58,64, 0.7) 0px 0px 0px;
     background-color: var(--hot-pink);
     color: var(--winter-sky);
+    margin-left: 50%;
+    transform: translateX(-46%);
 
 }
 
