@@ -41,43 +41,44 @@
         </div>
     </div>
     <br>
-    <div>
-        <h1 id="hh1"> QUERY´S MÁS VOTADAS</h1>
-        <table class="table text-center">
-            <thead class="fw-bold">
-                <tr>
-                <th scope="col">Puesto</th>
-                <th scope="col">Query</th>
+    
+    <div><!--Ranking-->
+        <h1 id="hh1"> TOP 5 QUERY'S MÁS VOTADAS: </h1>
+        
+        <table class="table">
+            <thead id="head-ranking">
+            <tr>
+                <th scope="col"> Puesto </th>
+                <th scope="col"> Query </th>
             </tr>
             </thead>
-                    
-            <tbody class="fw-bold">                        
-                <tr th:each="query:${querys}">
-                <td> #1 </td> <!-- Falta averiguar la consulta para que aparezcan las 5 mas votadas(desde tim)--> 
-                <td th:text="${query.titulo}"> Titulo </td> 
-               </tr>
-               <tr th:each="query:${querys}">
-                <td> #2</td> 
-                <td th:text="${query.titulo}"> Titulo </td>
-               </tr>
-               <tr th:each="query:${querys}">
-                <td> #3 </td> 
-                <td th:text="${query.titulo}"> Titulo </td>
-               </tr>
-               <tr th:each="query:${querys}">
-                <td> #4 </td> 
-                <td th:text="${query.titulo}"> Titulo </td>
-               </tr>
-               <tr th:each="query:${querys}">
-                <td> #5 </td> 
-                <td th:text="${query.titulo}"> Titulo </td>
-               </tr>
-            </tbody>        
-            </table>
         
-
+            <tbody id="body-ranking">
+              <tr>
+                <th scope="row"> #1 </th>
+                <td th:each="query:${querys}"> Query </td><!-- consulta para que muestre los primeros 5 resultados -->
+              </tr>
+              <tr> 
+                <th scope="row"> #2 </th>
+                <td th:each="query:${querys}"> Query </td>
+              </tr>
+              <tr>
+                <th scope="row"> #3 </th>
+                <td th:each="query:${querys}"> Query </td>
+              </tr>
+              <tr>
+                <th scope="row"> #4 </th>
+                <td th:each="query:${querys}"> Query </td>
+              </tr>
+              <tr>
+                <th scope="row"> #5 </th>
+                <td th:each="query:${querys}"> Query </td>
+              </tr>
+            </tbody>
+          </table>
     </div>
-    <div th:replace="logIn :: footer"></div>
+
+    <div th:replace="IndexIniciado :: footer"></div>
 
         
 </body>

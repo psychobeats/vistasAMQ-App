@@ -35,8 +35,6 @@ body{
     background-position: center center;
     background-attachment:scroll;
     background-size: cover;
-    
-    
 }
 
 #hh1{
@@ -47,6 +45,7 @@ body{
     text-align: center;
     
 }
+
 .nav {
     background: linear-gradient(90deg, rgba(64,37,82,1) 0%, rgba(255,239,195,1) 100%);
     display: flex;
@@ -92,7 +91,6 @@ p {
     font-family: 'Righteous', cursive;
     text-align: justify;
     margin: 5%;
-
 }
 
 .layout{
@@ -117,7 +115,7 @@ p {
 .accordion__respuesta {
     display: none;
 } 
-.accordion.active .accordion__respuesta {
+.accordion.active .accordion__respuesta{
     display: block;
 }
 
