@@ -14,12 +14,24 @@
 </head>
 
 <body>
-    <div th:replace="perfil :: navBarInicio"></div>
+    <nav class="nav">
+        <a class="navbar-brand" id="nav-logo"  href="#">
+             <img src="https://drive.google.com/uc?export=download&id=1NCoNyhyGOZLjZlD187jCdu9aYntNhV68" width="160">
+           </a>
+         
+         <a class="nav-link"  href="#">Mi cuenta</a>
+         <a class="nav-link" href="#">Mis Query's</a>
+         <a class="nav-link" href="#">Preguntas Frecuentes</a> 
+     </nav>
 
-    
     <h1 th:text="${encuesta.titulo}"> Título</h1>
     <BR>
-        <div th:replace="logIn :: footer"></div>
+   
+        <div th:fragment="footer">
+            <footer>
+            <p>- A mover la Query, 2022 -</p>
+            </footer>
+          </div>
 
             
 </body>
