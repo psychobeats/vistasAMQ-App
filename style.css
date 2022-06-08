@@ -152,7 +152,7 @@ a:link, a:visited, a:active {
 }
 
 #table-ranking{
-    background-color: var(--dutch-white); 
+    background-color: rgb(255, 255, 255, 0.5);    
     box-shadow: rgba(43,58,64, 0.7) 4px 4px 0px;
     margin: 0px auto; 
     padding: 35px; 
@@ -161,7 +161,7 @@ a:link, a:visited, a:active {
     border-spacing: 100px 18px;
     color: var(--winter-sky);
     text-shadow: 2px 2px 2px var(--atomic-tangerine);
-    border-radius: 8px;
+    border-radius: 20px;
 
 }
 
@@ -170,13 +170,13 @@ a:link, a:visited, a:active {
     padding-bottom: 20px;
 }
 
-#query-ranking:link{
-    color:var(--winter-sky);
+#query-ranking:link{    
+    color:var(--blue-violet);
 }
 #query-ranking:hover{
     color:var(--orange-pantone);
 }
 #query-ranking:active{
-    color:var(--blue-violet);
+    color:var(--winter-sky);
 }
 
