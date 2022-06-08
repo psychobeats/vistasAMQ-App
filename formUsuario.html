@@ -14,44 +14,68 @@
 
 <body>
 
-<div th:replace="indexInicial :: navBarPublico"></div>
+  <div th:fragment="navBarPublico">  
+     
+    <nav class="nav">
+       <a class="navbar-brand" id="nav-logo"  href="#">
+            <img src="https://drive.google.com/uc?export=download&id=1NCoNyhyGOZLjZlD187jCdu9aYntNhV68" width="160">
+          </a>
+        
+        <a class="nav-link"  href="#">Registro</a>
+        <a class="nav-link" href="#">Log In</a>
+        <a class="nav-link" href="#">Preguntas Frecuentes</a>
+    
+    </nav>
+    </div>
 
 <h1 id="hh1">Formulario de registro: </h1>
 
-<form>
-  <div>
-    <label id="label-usuario">Alias: </label>
-    <input id="input-usuario" type="text" th:value="${alias}">
+<form class="form-usuario">
+  <div class="form_group">
+    <input id="input-usuario" type="input" class="form_field" th:value="${alias}" 
+    placeholder="Alias">
+    <label for="alias" class="form_label">Alias</label>
   </div>
-  <div>
+  <br>
+  <div class="form_group">
+    <input id="input-usuario" type="input" class="form_field" th:value="${email}" 
+    placeholder="E-mail">
+    <label for="e-mail" class="form_label">E-mail</label>
+  </div> 
+  <br>
+  <div class="form_group">
+    
+    <input id="input-usuario" type="password" class="form_field" th:value="${clave}"
+    placeholder="Password">
+    <label for="input-usuario" class="form_label"> Password</label>
+    <div class="form-text1">Condiciones para la clave.</div>
+  </div>
+  <br>
+  <div class="form_group">
+    <input id="input-usuario" type="password" class="form_field" th:value="${claveValidar}" 
+    placeholder="Confirmar Password">
+    <label for="input-usuario" class="form_label">Confirmar Password </label>
+  </div>
+  <br>
+  <div class="input-group">
     <label id="label-usuario">Sexo: </label>
     <select class="form-control" th:field="*{Sexo}">
      <option id="input-usuario" th:each="Sexo : ${T(com.attacomsian.runner.domains.constants.Topic).values()}" th:value="${Sexo}" th:text="${Sexo}">Seleccionar</option>
     </select>
   </div>  
-  <div>
-    <label id="label-usuario">E-mail: </label>
-    <input id="input-usuario" type="email" th:value="${email}">
-  </div>
-  <div>
+  <br>
+  <div class="input-group">
     <label id="label-usuario">País: </label>
     <select class="form-control" th:field="*{Pais}">
      <option id="input-usuario" th:each="Pais : ${T(com.attacomsian.runner.domains.constants.Topic).values()}" th:value="${Pais}" th:text="${Pais}">Seleccionar</option>
     </select>
   </div>
-  <div>
+  <br>
+  <div class="input-group">
     <label id="label-usuario">Fecha de Nacimiento: </label>
     <input id="input-usuario" type="date" th:value="${nacimiento}">
   </div> 
-  <div>
-    <label id="label-usuario">Clave: </label>
-    <input id="input-usuario" type="password" th:value="${clave}">
-    <div class="form-text">Condiciones para la clave.</div>
-  </div>
-  <div>
-    <label id="label-usuario">Confirmar Clave: </label>
-    <input id="input-usuario" type="password" th:value="${claveValidar}">
-  </div>
+  <br>
 
   <button class="btn btn-primary" type="submit" id="btn-usuario" href="#">Guardar</button>
 </form>

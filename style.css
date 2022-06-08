@@ -157,3 +157,73 @@ a:link, a:visited, a:active {
     
 }
 
+.form-usuario{
+    font-family: serif;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    min-height: 200vh;
+    }
+    
+    .form_group{
+        position: relative;
+        padding: 15px 0 0;
+        
+        width: 50%;
+    }
+    
+    .form_field{
+        font-family: serif;
+        width: 100%;
+        border:0;
+        border-bottom: 2px solid #9b9b9b;
+        outline: 0;
+        font-size: 1.3rem;
+        color: #fff;
+        padding: 7px 0;
+        background: transparent;
+        transition: border-color 0.2s;
+    
+    }
+    
+    .form_field::placeholder{
+        color: transparent;
+    }
+    
+    .form_label{
+        position: absolute;
+        top: 0;
+        display: block;
+        transition:0.2s;
+        font-size: 1rem;
+        color: #9b9b9b;
+    }
+    
+    .form_field:placeholder-shown ~ .form_label{
+        font-size: 1.3rem;
+        cursor: text;
+        top:20px;
+    
+    }
+    .form_field:focus{
+        padding-bottom: 6px;
+        font-weight: 700;
+        border-width: 3px;
+        border-image: linear-gradient(to right, #ff0062,#00ffff);
+        border-image-slice: 1;
+    } 
+    
+    .form_field:focus ~ .form_label{
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        color: #2afadf;
+        font-weight: 700;
+    
+    }
+
+   
