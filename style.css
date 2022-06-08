@@ -158,11 +158,11 @@ a:link, a:visited, a:active {
 }
 
 .form-usuario{
-    font-family: serif;
+    
+    font-family: 'Pacifico', cursive;
     font-size: 1.5rem;
     display: flex;
     flex-direction: column;
-    
     align-items: center;
     min-height: 200vh;
     }
@@ -170,15 +170,14 @@ a:link, a:visited, a:active {
     .form_group{
         position: relative;
         padding: 15px 0 0;
-        
         width: 50%;
     }
     
     .form_field{
-        font-family: serif;
+        font-family: 'Pacifico', cursive;
         width: 100%;
         border:0;
-        border-bottom: 2px solid #9b9b9b;
+        border-bottom: 2px solid var(--outer-space-crayola);
         outline: 0;
         font-size: 1.3rem;
         color: #fff;
@@ -198,7 +197,7 @@ a:link, a:visited, a:active {
         display: block;
         transition:0.2s;
         font-size: 1rem;
-        color: #9b9b9b;
+        color: var(--outer-space-crayola);
     }
     
     .form_field:placeholder-shown ~ .form_label{
@@ -211,7 +210,7 @@ a:link, a:visited, a:active {
         padding-bottom: 6px;
         font-weight: 700;
         border-width: 3px;
-        border-image: linear-gradient(to right, #ff0062,#00ffff);
+        border-image: linear-gradient(to right, var(--azure), var(--winter-sky));
         border-image-slice: 1;
     } 
     
@@ -221,7 +220,7 @@ a:link, a:visited, a:active {
         display: block;
         transition: 0.2s;
         font-size: 1rem;
-        color: #2afadf;
+        color: var(--blue-violet);
         font-weight: 700;
     
     }
