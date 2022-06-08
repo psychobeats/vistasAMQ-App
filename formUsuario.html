@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
   <div th:fragment="navBarPublico">  
      
     <nav class="nav">
@@ -79,8 +78,27 @@
 
   <button class="btn btn-primary" type="submit" id="btn-usuario" href="#">Guardar</button>
 </form>
+
+<div th:fragment="footer">
+  <footer class="pie-pagina">
+    <div class="grupo-1">
+      <div class="box">
+        <figure>
+          <a>
+            <img src="https://drive.google.com/uc?export=download&id=1NCoNyhyGOZLjZlD187jCdu9aYntNhV68" width="160"
+              class="imagen-footer">
+          </a>
+        </figure>
+        <br>
+        <div class="grupo-2">
+          <a> &copy;2022 A MOVER LA QUERY!</a>
+          <br>
+          <a>Todos los Derechos Reservados</a>
+
+        </div>
+      </div>
+  </footer>
 </div>
-<div th:replace="IndexIniciado :: footer"></div>
 
 </body>
 </html>
