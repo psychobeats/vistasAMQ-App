@@ -24,38 +24,48 @@
          <a class="nav-link" href="#">Preguntas Frecuentes</a> 
      </nav>
 
-<h1>Crear nueva Query: </h1>
-    
-<form>
-    <div>
-      <input type="text" th:value="${alias}" placeholder="Acá ingresá la pregunta">
+<h1 id="hh1">Crear nueva Query: </h1>
+    <!--<form class="form-usuario">
+  <div class="form_group">
+    <input id="input-usuario" type="input" class="form_field" th:value="${alias}" 
+    placeholder="Alias">
+    <label for="alias" class="form_label">Alias</label>
+  </div> -->
+<form class="form-usuario">
+    <div class="form_group">
+      <input type="input" class="form_field" th:value="${alias}" placeholder="Ingresá tú pregunta">
+      <label for="Ingresá tú pregunta" class="form_label">Ingresá tú pregunta</label>
     </div>
-    <div>
-      <label>Opción 1: </label>
-      <input type="text" th:value="${opcion1}">
+    <div class="form_group">
+      <input type="input" class="form_field" th:value="${opcion1}" placeholder="Opción 1">
+      <label for="Opción 1" class="form_label">Opción 1</label>
     </div>  
-    <div>
-        <label>Opción 2: </label>
-        <input type="text" th:value="${opcion2}">
+    <div class="form_group">
+        <input type="input" class="form_field" th:value="${opcion2}" placeholder="Opción 2">
+        <label for="Opción 2" class="form_label">Opción 2</label>
     </div> 
-    <div>        
+    <div class="form_group">        
         <div class="form-text">Te gustaría agregar una tercer opción?</div>        
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="option1"> <!--REVISAR ACÁ, PONER UN TRUE SI ACTIVAN EL CHECK-->
-            <label class="form-check-label">Sí</label> 
-            <!--Si el check está activado, se da de alta a un "altaOpcion3"-->
-        </div>
+        <label class="check">
+          <input type="checkbox" id="input"> <!--REVISAR ACÁ, PONER UN TRUE SI ACTIVAN EL CHECK-->
+          <span class="checkbox"></span>
+          <label class="labelbox">Sí</label> 
+          
+          <!--Si el check está activado, se da de alta a un "altaOpcion3" <label class="labelbox">Sí</label> -->
+        </label>
+      </div>
+      <div class="form_group">  
      <!-- PREGUNTAR CON TIMLEAF SI ESTA DE ALTA EL CHEK, SE APARECE ESTO, SINO NO! -->
-        <label>Opción 3: </label>        
-        <input th:if="${Encuesta.altaOpcion3}==true" type="text" th:value="${opcion3}"></a></td>        
+        <input th:if="${Encuesta.altaOpcion3}==true" type="input" class="form_field" th:value="${opcion3}" placeholder="Opción 3"></a></td>   
+        <label for="Opción 3" class="form_label">Opción 3</label>       
     </div> 
-    <div>
+    <div class="form_group">
         <div class="form-text">Le agregamos una fecha límite a tu Query?</div>
         <input type="date" th:value="${fechaLimite}"> <!--Ver si hay que agregar a la entidad un atributo "fechaLimite"-->
     </div>
+    <br>
     
-    
-    <button class="btn btn-primary" type="submit">Crear Query</button>
+    <button class="btn btn-primary" id="btnIndex" type="submit">Crear Query</button>
 </form>
 
 <div th:fragment="footer">

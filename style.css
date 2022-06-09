@@ -54,7 +54,7 @@ body{
 
 #nav-logo{
     text-align: left;
-    margin-right: 55%;
+    margin-right: 53%;
     padding-top: 5px;
     
   
@@ -62,9 +62,9 @@ body{
 
 .nav-link {
     text-align: right;
-    font-size: 18px;
+    font-size: 17px;
     margin-left: 0;
-    padding: 19px;
+    padding: 20px;
     font-family: 'Pacifico', cursive;
     text-decoration: none;
     
@@ -225,6 +225,10 @@ a:link, a:visited, a:active {
     
     }
 
+    .form-text, .form-check{
+        color: var(--outer-space-crayola);
+    }
+
    
 /* FOOTER */
 .pie-pagina {
@@ -246,3 +250,32 @@ a:link, a:visited, a:active {
     vertical-align: middle;
     
 }
+
+.check{
+    display: block;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+#input{ position: absolute; transform: scale(0);}
+
+#input:checked ~ .checkbox{
+    transform: rotate(45deg);
+    width: 10px;
+    margin-left:16px;
+    border-color: var(--winter-sky);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-radius: 0;
+}
+
+.checkbox{
+    display: block;
+    width: inherit;
+    height: inherit;
+    border: 3px solid var(--outer-space-crayola);
+    border-radius:6px;
+    transition: all 0.375s;
+}
+
