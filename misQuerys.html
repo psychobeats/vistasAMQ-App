@@ -12,8 +12,15 @@
     <title>Document</title>
 </head>
 <body>
-    
-<div th:replace="perfil :: navBarInicio"></div>
+  <nav class="nav">
+    <a class="navbar-brand" id="nav-logo"  href="#">
+         <img src="https://drive.google.com/uc?export=download&id=1NCoNyhyGOZLjZlD187jCdu9aYntNhV68" width="160">
+       </a>
+     
+     <a class="nav-link"  href="#">Mi cuenta</a>
+     <a class="nav-link" href="#">Mis Query's</a>
+     <a class="nav-link" href="#">Preguntas Frecuentes</a> 
+ </nav>
 
 <h1>Mis Query's</h1>
 <table class="table text-center">
@@ -30,12 +37,52 @@
         <td th:text="${query.titulo}">Titulo</td> 
         <td th:if="${query.alta}==false"><a th:href="@{/query/alta (id=${query.id})}"><button type="button">Dar de alta</button></a></td>
         <td th:if="${query.alta}==true"><a th:href="@{/query/baja (id=${query.id})}"><button type="button">Dar de baja</button></a></td>
-        <td><a th:href="@{/query/eliminar (id=${query.id})}"><button type="button">Eliminar</button></a></td>              
+        <td><a th:href="@{/query/eliminar (id=${query.id})}"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@ndo">Eliminar</button></a></td>              
         </tr>
     </tbody>        
-    </table>     
+    </table> 
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">¿Seguro?</h5>
+              <button id="btn-query" type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+        </div>
+            <div class="modal-body">
+              <p>Estás a punto de borrar la Query permanentemente! </p>
+            </div>
+            <div class="modal-footer">
+              <button id="btn-query" type="button" class="btn btn-secondary" data-dismiss="modal">Me arrepentí!</button>
+              <button id="btn-query" type="submit" class="btn btn-primary" value="Submit">Sí! Borrar Query!</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<div th:replace="logIn :: footer"></div>
+      
+<div th:fragment="footer">
+  <footer class="pie-pagina">
+    <div class="grupo-1">
+      <div class="box">
+        <figure>
+          <a>
+            <img src="https://drive.google.com/uc?export=download&id=1NCoNyhyGOZLjZlD187jCdu9aYntNhV68" width="160"
+              class="imagen-footer">
+          </a>
+        </figure>
+        <br>
+        <div class="grupo-2">
+          <a> &copy;2022 A MOVER LA QUERY!</a>
+          <br>
+          <a>Todos los Derechos Reservados</a>
+
+        </div>
+      </div>
+  </footer>
+</div>
 
 </body>
 </html>

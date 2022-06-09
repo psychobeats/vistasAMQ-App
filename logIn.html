@@ -14,35 +14,57 @@
 </head>
 
 <body>
-
-    <div th:replace="indexInicial :: navBarPublico"></div>
+    <div th:fragment="navBarPublico">  
+     
+        <nav class="nav">
+           <a class="navbar-brand" id="nav-logo"  href="#">
+                <img src="https://drive.google.com/uc?export=download&id=1NCoNyhyGOZLjZlD187jCdu9aYntNhV68" width="160">
+              </a>
+            
+            <a class="nav-link"  href="#">Registro</a>
+            <a class="nav-link" href="#">Log In</a>
+            <a class="nav-link" href="#">Preguntas Frecuentes</a>
+        
+        </nav>
+        </div>
 
 <div>
-
-    <h1> Ingresar: </h1>
-
+    <h1 id="hh1"> Ingresar: </h1>
     <form>        
     <div>
-        <label>E-mail: </label>
-        <input type="email" th:value="${email}">
+        <label id="label-usuario">E-mail: </label>
+        <input id="input-usuario" type="email" th:value="${email}">
     </div>
     <div>
-       <label>Clave: </label>
-        <input type="password" th:value="${clave}">
+       <label id="label-usuario">Clave: </label>
+        <input id="input-usuario" type="password" th:value="${clave}">
         <div class="form-text">Condiciones para la clave.</div>
-    </div>
-         
-<button class="btn btn-primary" type="submit">Ingresar</button>  
+    </div>         
+<button class="btn btn-primary" type="submit" id="btn-usuario" href="#">Ingresar</button>  
 </form>
 </div>
 
 
 <div th:fragment="footer">
-<footer>
-<p>- A mover la Query, 2022 -</p>
-</footer>
-</div>
-
+    <footer class="pie-pagina">
+      <div class="grupo-1">
+        <div class="box">
+          <figure>
+            <a>
+              <img src="https://drive.google.com/uc?export=download&id=1NCoNyhyGOZLjZlD187jCdu9aYntNhV68" width="160"
+                class="imagen-footer">
+            </a>
+          </figure>
+          <br>
+          <div class="grupo-2">
+            <a> &copy;2022 A MOVER LA QUERY!</a>
+            <br>
+            <a>Todos los Derechos Reservados</a>
+  
+          </div>
+        </div>
+    </footer>
+  </div>
 
 </body>
 </html> 
