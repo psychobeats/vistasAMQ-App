@@ -227,6 +227,8 @@ a:link, a:visited, a:active {
 
     .form-text, .form-check{
         color: var(--outer-space-crayola);
+        margin-bottom: 10px;
+        
     }
 
    
@@ -256,6 +258,7 @@ a:link, a:visited, a:active {
     width: 25px;
     height: 25px;
     cursor: pointer;
+    
 }
 
 #input{ position: absolute; transform: scale(0);}
@@ -276,6 +279,7 @@ a:link, a:visited, a:active {
     height: inherit;
     border: 3px solid var(--outer-space-crayola);
     border-radius:6px;
-    transition: all 0.375s;
+    transition: all 0.65s;
 }
+
 
