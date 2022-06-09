@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <link rel="icon" type="icon/png" sizes=""href="assets/favicon.png">
 </head>
 <body>
   <nav class="nav">
@@ -22,7 +23,7 @@
      <a class="nav-link" href="#">Preguntas Frecuentes</a> 
  </nav>
 
-<h1>Mis Query's</h1>
+<h1 id="hh1">Mis Query's</h1>
 <table class="table text-center">
     <thead class="fw-bold">
        <tr>
@@ -35,9 +36,9 @@
     <tbody class="fw-bold">
         <tr th:each="query:${querys}">
         <td th:text="${query.titulo}">Titulo</td> 
-        <td th:if="${query.alta}==false"><a th:href="@{/query/alta (id=${query.id})}"><button type="button">Dar de alta</button></a></td>
-        <td th:if="${query.alta}==true"><a th:href="@{/query/baja (id=${query.id})}"><button type="button">Dar de baja</button></a></td>
-        <td><a th:href="@{/query/eliminar (id=${query.id})}"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@ndo">Eliminar</button></a></td>              
+        <td th:if="${query.alta}==false"><a th:href="@{/query/alta (id=${query.id})}"><button type="button" id="btnRegular">Dar de alta</button></a></td>
+        <td th:if="${query.alta}==true"><a th:href="@{/query/baja (id=${query.id})}"><button type="button" id="btnRegular">Dar de baja</button></a></td>
+        <td><a th:href="@{/query/eliminar (id=${query.id})}"><button type="button" class="btn btn-primary" id="btnRegular" data-toggle="modal" data-target="#exampleModal" data-whatever="@ndo">Eliminar</button></a></td>              
         </tr>
     </tbody>        
     </table> 
@@ -47,16 +48,19 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title">¿Seguro?</h5>
-              <button id="btn-query" type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-              </button>
+              <button id="btnMiddle" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"></span>
+              Si</button>
+              <button id="btnMiddle" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"></span>
+              No</button>
         </div>
             <div class="modal-body">
               <p>Estás a punto de borrar la Query permanentemente! </p>
             </div>
             <div class="modal-footer">
-              <button id="btn-query" type="button" class="btn btn-secondary" data-dismiss="modal">Me arrepentí!</button>
-              <button id="btn-query" type="submit" class="btn btn-primary" value="Submit">Sí! Borrar Query!</button>
+              <button id="btnMiddle" type="button" class="btn btn-secondary" data-dismiss="modal">Me arrepentí!</button>
+              <button id="btnMiddle" type="submit" class="btn btn-primary" value="Submit">Borrar Query!</button>
             </div>
           </div>
         </div>

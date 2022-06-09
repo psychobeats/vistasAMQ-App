@@ -8,9 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
-
+    
     <link rel="stylesheet" href="style.css">
     <title> LogIn </title>
+    <link rel="icon" type="icon/png" sizes=""href="assets/favicon.png">
 </head>
 
 <body>
@@ -30,17 +31,24 @@
 
 <div>
     <h1 id="hh1"> Ingresar: </h1>
-    <form>        
-    <div>
-        <label id="label-usuario">E-mail: </label>
-        <input id="input-usuario" type="email" th:value="${email}">
+    <!--<form class="form-usuario">
+  <div class="form_group">
+    <input id="input-usuario" type="input" class="form_field" th:value="${alias}" 
+    placeholder="Alias">
+    <label for="alias" class="form_label">Alias</label>
+  </div>-->
+    <form class="form-usuario">        
+    <div class="form_group">
+        <input id="input-usuario" type="input" class="form_field" th:value="${email}" placeholder="E-mail">
+        <label for="e-mail" class="form_label">E-mail</label>
     </div>
-    <div>
-       <label id="label-usuario">Clave: </label>
-        <input id="input-usuario" type="password" th:value="${clave}">
+    <div class="form_group">
+        <input id="input-usuario" type="input" class="form_field" th:value="${clave}" placeholder="Password">
+        <label for="password" class="form_label">Clave</label>
         <div class="form-text">Condiciones para la clave.</div>
-    </div>         
-<button class="btn btn-primary" type="submit" id="btn-usuario" href="#">Ingresar</button>  
+    </div>
+    <br>         
+<button class="btn btn-primary" id="btnIndex" type="submit" id="btn-usuario" href="#">Ingresar</button>  
 </form>
 </div>
 
