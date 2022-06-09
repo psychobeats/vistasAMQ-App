@@ -74,8 +74,7 @@ body{
     margin-left: 0;
     padding: 20px;
     font-family: 'Pacifico', cursive;
-    text-decoration: none;
-    
+    text-decoration: none;    
 }
 
 .nav-link:link{
@@ -100,6 +99,8 @@ p {
     text-align: justify;
     margin: 5%;
 }
+
+/*PREGUNTAS FRECUENTES*/
 
 .layout{
     width: 600px;  
@@ -131,6 +132,8 @@ a:link, a:visited, a:active {
     text-decoration:none;
 }
 
+/*BOTON INDEX*/
+
 #btnIndex{
     background-color: var(--orange-pantone);
     box-shadow: rgba(43,58,64, 0.7) 4px 4px 0px;
@@ -159,9 +162,12 @@ a:link, a:visited, a:active {
     transform: translateX(-46%);    
 }
 
+/*RANKING*/
+
 #table-ranking{
     background-color: rgb(255, 255, 255, 0.5);    
     box-shadow: rgba(43,58,64, 0.7) 4px 4px 0px;
+    border-radius: 20px;
     margin: 0px auto; 
     padding: 35px; 
     font-family: 'Pacifico', cursive;
@@ -169,9 +175,7 @@ a:link, a:visited, a:active {
     border-spacing: 100px 18px;
     color: var(--winter-sky);
     text-shadow: 2px 2px 2px var(--atomic-tangerine);
-    border-radius: 20px;
-
-}
+   }
 
 #columna{
     font-size: larger;
@@ -262,67 +266,84 @@ a:link, a:visited, a:active {
     font-size: 1.5rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    margin-left: 200px; 
+    margin-bottom: 1px;   
     min-height: 200vh;
-    }
+}
     
-    .form_group{
-        position: relative;
-        padding: 15px 0 0;
-        width: 50%;
-    }
+.form_group{
+    position: relative;
+    padding: 15px 0 0;
+    width: 75%;
+}
     
-    .form_field{
-        font-family: 'Pacifico', cursive;
-        width: 100%;
-        border:0;
-        border-bottom: 2px solid var(--outer-space-crayola);
-        outline: 0;
-        font-size: 1.3rem;
-        color: #fff;
-        padding: 7px 0;
-        background: transparent;
-        transition: border-color 0.2s;
+.form_field{
+    font-family: 'Pacifico', cursive;
+    width: 100%;
+    border:0;
+    border-bottom: 2px solid var(--outer-space-crayola);
+    outline: 0;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;    
+}
     
-    }
+.form_field::placeholder{
+    color: transparent;
+}
     
-    .form_field::placeholder{
-        color: transparent;
-    }
+.form_label{
+    position: absolute;
+    top: 0;
+    display: block;
+    transition:0.2s;
+    font-size: 1rem;
+    color: var(--outer-space-crayola);
+}
     
-    .form_label{
-        position: absolute;
-        top: 0;
-        display: block;
-        transition:0.2s;
-        font-size: 1rem;
-        color: var(--outer-space-crayola);
-    }
+.form_field:placeholder-shown ~ .form_label{
+    font-size: 1.3rem;
+    cursor: text;
+    top:20px;
+}
+
+.form_field:focus{
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, var(--azure), var(--winter-sky));
+    border-image-slice: 1;
+} 
     
-    .form_field:placeholder-shown ~ .form_label{
-        font-size: 1.3rem;
-        cursor: text;
-        top:20px;
-    
-    }
-    .form_field:focus{
-        padding-bottom: 6px;
-        font-weight: 700;
-        border-width: 3px;
-        border-image: linear-gradient(to right, var(--azure), var(--winter-sky));
-        border-image-slice: 1;
-    } 
-    
-    .form_field:focus ~ .form_label{
-        position: absolute;
-        top: 0;
-        display: block;
-        transition: 0.2s;
-        font-size: 1rem;
-        color: var(--blue-violet);
-        font-weight: 700;
-    
-    }
+.form_field:focus ~ .form_label{
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: var(--blue-violet);
+    font-weight: 700;
+}
+
+.condiciones-clave{
+    font-family: 'Righteous', cursive;
+    font-size: 14px;
+    margin-top: 5px;
+    color: var(--outer-space-crayola);    
+}
+  
+#label-usuario{
+    font-size: 22px;
+    color: var(--outer-space-crayola);    
+}
+
+.recuadro{
+    margin-bottom: 115px;
+}
+
 
     .form-text, .form-check{
         color: var(--outer-space-crayola);
@@ -334,22 +355,22 @@ a:link, a:visited, a:active {
 /* FOOTER */
 .pie-pagina {
     width: 100%;
+    margin-top: 80px;
 }
 .pie-pagina .grupo-1{
-    width: 100%;
-   
+    width: 100%;   
     line-height: 5px;
     text-align: center;
     vertical-align: middle;
 }
+
 .pie-pagina .grupo-2{
-    width: 100%;
-   font-size: 10px;
+   width: 100%;
+   font-size: 15px;
    font-family: 'Righteous', cursive;
     line-height: 15px;
     text-align: center;
-    vertical-align: middle;
-    
+    vertical-align: middle;  
 }
 
 .check{
