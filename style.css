@@ -46,6 +46,14 @@ body{
     
 }
 
+#p1{
+    text-align: center;
+    font-size: 30px;
+    color: var(--outer-space-crayola);
+    text-shadow: 2px 2px 2px var(--amber);
+
+}
+
 .nav {
     background: linear-gradient(90deg, rgba(64,37,82,1) 0%, rgba(255,239,195,1) 100%);
     display: flex;
