@@ -29,18 +29,35 @@ font-family: 'Pacifico', cursive;
 font-family: 'Righteous', cursive;*/
 }
 
-body{
-    background-image: url("https://drive.google.com/uc?export=download&id=16XApxKWDAbuHVsoONOrYG8J-gnilGbi3");
+body, html{
+    background-image: url("/background.svg");
     background-repeat:no-repeat;
     background-position: center center;
     background-attachment:scroll;
     background-size: cover;
+    margin: 0;
+	padding: 0;
+	
+}
+
+svg {
+	width: 100%;
+	height: 101vh;
 }
 
 #hh1{
     color: var(--blue-violet);
     text-shadow: 2px 2px 2px var(--winter-sky);
     font-size: 80px;
+    font-family: 'Righteous', cursive;
+    text-align: center;
+    
+}
+
+#hh2{
+    color: var(--blue-violet);
+    text-shadow: 2px 2px 2px var(--winter-sky);
+    font-size: 55px;
     font-family: 'Righteous', cursive;
     text-align: center;
     
