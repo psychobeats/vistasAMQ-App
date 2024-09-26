@@ -11,30 +11,60 @@
 
     <link rel="stylesheet" href="style.css">
     <title>Mi perfil</title>
+    <link rel="icon" type="icon/png" sizes=""href="assets/favicon.png">
 </head>
 
 <body>
-    <div th:replace="IndexIniciado :: navBarInicio"></div>
+    <nav class="nav">
+        <a class="navbar-brand" id="nav-logo"  href="#">
+             <img src="https://drive.google.com/uc?export=download&id=1NCoNyhyGOZLjZlD187jCdu9aYntNhV68" width="160">
+           </a>
+         
+         <a class="nav-link"  href="#">Mi cuenta</a>
+         <a class="nav-link" href="#">Mis Query's</a>
+         <a class="nav-link" href="#">Preguntas Frecuentes</a> 
+     </nav>
 
     <div>
-            <h1> Mi cuenta</h1>
+            <h1 id="hh1"> Mi cuenta</h1>
             <div>
                 <p>ALIAS:</p>
-                <span th:text="${usuario.alias}">alias</span>
+                <span th:text="${usuario.alias}" id="span-usuario">alias</span>
                 <p>FECHA DE NACIMIENTO:</p> 
-                <span th:text="${usuario.nacimiento}">nacimiento</span>
+                <span th:text="${usuario.nacimiento}" id="span-usuario">nacimiento</span>
                 <p>PAIS:</p> 
-                <span th:text="${usuario.pais}">pais</span>
+                <span th:text="${usuario.pais}" id="span-usuario">pais</span>
                 <p>SEXO:</p>
-                <span th:text="${usuario.sexo}">sexo</span>
+                <span th:text="${usuario.sexo}" id="span-usuario">sexo</span>
                 <p>EMAIL</p>
-                <span th:text="${usuario.email}">email</span>
+                <span th:text="${usuario.email}" id="span-usuario">email</span>
             </div>
         
-        <button th:href="#">Mis Query´s</button>
-        <button th:href="#">Query´s votadas</button>
+        <button th:href="#" id="btn-usuario">Mis Query´s</button>
+        <button th:href="#" id="btn-usuario">Query´s votadas</button>
     </div>
-    <div th:replace="logIn :: footer"></div>
+
+    
+<div th:fragment="footer">
+    <footer class="pie-pagina">
+      <div class="grupo-1">
+        <div class="box">
+          <figure>
+            <a>
+              <img src="https://drive.google.com/uc?export=download&id=1NCoNyhyGOZLjZlD187jCdu9aYntNhV68" width="160"
+                class="imagen-footer">
+            </a>
+          </figure>
+          <br>
+          <div class="grupo-2">
+            <a> &copy;2022 A MOVER LA QUERY!</a>
+            <br>
+            <a>Todos los Derechos Reservados</a>
+  
+          </div>
+        </div>
+    </footer>
+  </div>
 
 
 </body>
